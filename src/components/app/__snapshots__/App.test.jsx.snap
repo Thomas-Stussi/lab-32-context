@@ -2,8 +2,19 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <header
+    class="dark"
+    padding-top="10px"
+  >
+    <button
+      data-testid="button"
+    >
+      Toggle Light/Dark Mode
+    </button>
+  </header>
+  <ul
+    class="CharacterList light"
+    data-testid="characters"
+  />
 </DocumentFragment>
 `;
