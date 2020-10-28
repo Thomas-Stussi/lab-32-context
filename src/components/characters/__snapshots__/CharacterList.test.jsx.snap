@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterList component renders CharacterList 1`] = `
+<DocumentFragment>
+  <ul
+    class="CharacterList light"
+    data-testid="characters"
+  />
+</DocumentFragment>
+`;

@@ -1,5 +1,8 @@
 import React from 'react';
+import Theme from '../theme-layer/Theme';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Theme />
+  );
 }
