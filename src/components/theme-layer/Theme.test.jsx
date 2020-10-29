@@ -7,7 +7,7 @@ import Theme from './Theme';
 jest.mock('../../services/heyArnoldApi.js');
 
 describe('darkmode theme list of things!', () => {
-  it('changes the background color', () => {
+  it('changes the background color', async() => {
     getCharacters.mockResolvedValue([
       {
         '_id': '5da237699734fdcb7bef8f51',
@@ -18,13 +18,21 @@ describe('darkmode theme list of things!', () => {
 
     render(<Theme />);
 
-    const button = screen.getByTestId('button');
+    const button = screen.getByRole('button');
     const characters = screen.getByTestId('characters');
+
+    expect(characters).toHaveClass('light');
+
+    fireEvent.click(button);
+
+    await waitFor(() => {
+      expect(characters).toHaveClass('dark');
+    });
 
     fireEvent.click(button);
 
     return waitFor(() => {
-      expect(characters).toHaveClass('dark');
+      expect(characters).toHaveClass('light');
     });
   });
 });

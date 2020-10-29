@@ -8,9 +8,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
 
   const toggle = () => {
-    if (theme === 'light') setTheme('dark');
-    if (theme === 'dark') setTheme('light');
-    console.log(theme);
+    setTheme(currentTheme => currentTheme === 'dark' ? 'light' : 'dark'); 
   };
 
   const bucket = {
