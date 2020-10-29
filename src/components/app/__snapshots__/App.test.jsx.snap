@@ -3,12 +3,10 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <header
-    class="dark"
+    class="light"
     padding-top="10px"
   >
-    <button
-      data-testid="button"
-    >
+    <button>
       Toggle Light/Dark Mode
     </button>
   </header>

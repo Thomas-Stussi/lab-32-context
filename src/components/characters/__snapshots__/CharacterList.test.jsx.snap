@@ -3,7 +3,7 @@
 exports[`CharacterList component renders CharacterList 1`] = `
 <DocumentFragment>
   <ul
-    class="CharacterList light"
+    class="CharacterList undefined"
     data-testid="characters"
   />
 </DocumentFragment>

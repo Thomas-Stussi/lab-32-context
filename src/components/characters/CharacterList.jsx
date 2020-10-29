@@ -4,10 +4,9 @@ import { useCharacters } from '../../hooks/characters';
 import { useThemePicker } from '../../hooks/themes';
 import CharacterItem from './CharacterItem';
 import styles from './CharacterList.css';
-import themes from '../theme-layer/Theme.css';
 
 const CharacterList = () => {
-  const { theme } = useThemePicker();
+  const { className } = useThemePicker();
   const characters = useCharacters();
 
   const characterElements = characters.map(character => (
@@ -17,7 +16,7 @@ const CharacterList = () => {
   ));
 
   return (
-    <ul data-testid="characters" className={`${styles.CharacterList} ${theme === 'dark' ? themes.dark : themes.light}`}>
+    <ul data-testid="characters" className={`${styles.CharacterList} ${className}`}>
       {characterElements}
     </ul>
   );
